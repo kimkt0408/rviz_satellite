@@ -39,7 +39,7 @@ This e.g. implies that only raster tiles (no vector tiles) are supported.
 
 Transformation of tiles to RViz fixed frame can be done in two ways that are configured using `Map Transform Type` option:
 
-1. Specify a `Map frame`, which is an ENU-oriented frame in which your robot localizes. This mode expects that the frame
+1. Specify a `Map frame`, which is an [ENU-oriented frame](ENU_oriented_frame.md) in which your robot localizes. This mode expects that the frame
    of the subscribed `NavSatFix` messages is consistent with the measured latitude/longitude in this map frame.
    In this mode, the tiles go through an intermediate transform to the map frame.
 2. Specify `UTM frame` (and possibly `UTM zone`). In this mode, no map frame is required and the tiles are directly 
