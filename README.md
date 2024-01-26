@@ -2,6 +2,7 @@
 
 This document serves as a manual for setting up and using the `rviz_satellite` package for offline visualization of satellite images in RViz alongside other outputs.
 
+
 ## Initial Setup
 
 ### Configuring `demo.gps`
@@ -29,6 +30,7 @@ To launch the rviz_satellite visualization tool, use the command:
 roslaunch rviz_satellite demo_utm.launch
 ```
 
+
 ## How to Use Satellite Images
 
 ### In Real-Time
@@ -39,7 +41,10 @@ roslaunch rviz_satellite demo_utm.launch
 
 ## Current status on the applications
 
-- **P-AgSLAM Gtsam Output**: The output from P-AgSLAM gtsam can be visualized in RViz along with a tiled map for comprehensive spatial understanding.
+- **P-AgSLAM Output**: The following outputs from P-AgSLAM can be visualized in RViz along with a tiled map for comprehensive spatial understanding:
+  - `/gtsam/trajectory`: P-AgSLAM with RTK GPS integration by GTSAM
+  - `/pagslam/debug/original_trajectory`: WO+IMU without RTK GPS integration by GTSAM
+  - `/pagslam/debug/trajectory`: P-AgSLAM without RTK GPS integration by GTSAM
 
 
 ## Unsolved problems and Notes
