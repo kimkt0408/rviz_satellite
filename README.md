@@ -19,13 +19,17 @@ To set the initial map frame, edit the following parameters in `demo.gps`:
 To use Google Maps for satellite imagery:
 1. **Request an Access Token** for Google Maps. Use the following command to access the tiles:
 ```
+sudo docker run -p 8080:8080 -d -t -v ~/mapproxy:/mapproxy danielsnider/mapproxy
+```
+```
 http://localhost:8080/wmts/gm_layer/gm_grid/{z}/{x}/{y}.png
 ```
 
 
 ## Launching rviz_satellite
+1. Before launching rviz_satellite visualization tool, Do rosbag play with rostopic `/gps/fix`.
 
-To launch the rviz_satellite visualization tool, use the command:
+2. To launch the rviz_satellite visualization tool, use the command:
 ```
 roslaunch rviz_satellite demo_utm.launch
 ```
