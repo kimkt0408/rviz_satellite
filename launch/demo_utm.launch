@@ -4,8 +4,8 @@
 
     <!-- Start rviz with a pre-configured AerialMap instance. It will use the fake GPS fix from above. -->
     <!-- <node pkg="rviz" type="rviz" name="rviz" args="-d $(find rviz_satellite)/launch/demo_utm.rviz"/> -->
-    <!-- <arg name="rviz" value="/home/kimkt0408/rviz/rviz_satellite.rviz" /> -->
-    <!-- <node name="rviz" pkg="rviz" type="rviz" args="-d $(arg rviz)" /> -->
+    <arg name="rviz" value="/home/kimkt0408/rviz/rviz_satellite.rviz" />
+    <node name="rviz" pkg="rviz" type="rviz" args="-d $(arg rviz)" />
 
     <!-- Static fake TF transform -->
     <!-- <node pkg="tf2_ros" type="static_transform_publisher" name="static_tf_fake" args="100 200 5 0.3 0 0 map base_link" /> -->
@@ -14,5 +14,5 @@
     <!-- (1) HLAB -->
     <!-- <node pkg="tf2_ros" type="static_transform_publisher" name="static_tf_fake_utm" args="483676.073 4422149.429 -35.551 0 0 0 utm map" /> -->    
     <!-- (2) ACRE 2023 -->
-    <!-- <node pkg="tf2_ros" type="static_transform_publisher" name="static_tf_fake_utm" args="499916.11 4482747.69 -35.551 0 0 0 utm map" /> -->
+    <node pkg="tf2_ros" type="static_transform_publisher" name="static_tf_fake_utm" args="499916.11 4482747.69 -35.551 0 0 0 utm map" />
 </launch>
